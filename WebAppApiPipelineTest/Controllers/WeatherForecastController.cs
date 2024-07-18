@@ -38,7 +38,7 @@ namespace WebAppApiPipelineTest.Controllers
                 return BadRequest("Please enter the name");
             }
 
-            return Ok($"Hello {name} 1");
+            return Ok($"Hello {name} 2");
         }
     }
 }
