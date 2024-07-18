@@ -29,5 +29,16 @@ namespace WebAppApiPipelineTest.Controllers
             })
             .ToList();
         }
+
+        [HttpGet]
+        public async Task<IActionResult> Greating(string name)
+        {
+            if (string.IsNullOrWhiteSpace(name))
+            {
+                return BadRequest("Please enter the name");
+            }
+
+            return Ok($"Hello {name}");
+        }
     }
 }
