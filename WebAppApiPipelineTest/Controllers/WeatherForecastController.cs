@@ -38,7 +38,7 @@ namespace WebAppApiPipelineTest.Controllers
                 return BadRequest("Please enter the name");
             }
 
-            return Ok($"Hello {name} 2");
+            return Ok($"Hello {name} from v1");
         }
         
         [HttpGet("greating-v2")]
@@ -49,7 +49,18 @@ namespace WebAppApiPipelineTest.Controllers
                 return BadRequest("Please enter the name");
             }
 
-            return Ok($"Hello {name} 2");
+            return Ok($"Hello {name} vvrom v2");
+        }
+        
+        [HttpGet("greating-v3")]
+        public async Task<IActionResult> Greatingv3(string name)
+        {
+            if (string.IsNullOrWhiteSpace(name))
+            {
+                return BadRequest("Please enter the name");
+            }
+
+            return Ok($"Hello {name} vvrom v3");
         }
     }
 }
