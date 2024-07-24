@@ -30,7 +30,7 @@ namespace WebAppApiPipelineTest.Controllers
             .ToList();
         }
 
-        [HttpGet]
+        [HttpGet("greating")]
         public async Task<IActionResult> Greating(string name)
         {
             if (string.IsNullOrWhiteSpace(name))
