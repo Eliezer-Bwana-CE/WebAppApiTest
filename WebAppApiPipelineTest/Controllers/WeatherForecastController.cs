@@ -40,5 +40,16 @@ namespace WebAppApiPipelineTest.Controllers
 
             return Ok($"Hello {name} 2");
         }
+        
+        [HttpGet("greating-v2")]
+        public async Task<IActionResult> Greatingv2(string name)
+        {
+            if (string.IsNullOrWhiteSpace(name))
+            {
+                return BadRequest("Please enter the name");
+            }
+
+            return Ok($"Hello {name} 2");
+        }
     }
 }
